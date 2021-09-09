@@ -1,4 +1,4 @@
-from random import randint
+import random 
 
 choices = ["rock", "paper", "scissors"]
 outcomes_and_points = {
@@ -18,11 +18,10 @@ outcomes_and_points = {
 # This dictionary contains the history in the format,
 # :key: round number and :value: in format 'computer_choice-player_choice'
 history = {}
-round = 1
 player_points = 0
 computer_points = 0
 
-while round <= 10:
+for round in range(1, 11):
     computer_choice = choices[randint(0, 2)]
     player_choice = input("\nChoose between rock, paper, scissors: ")
     outcome = computer_choice + "-" + player_choice
@@ -44,14 +43,11 @@ while round <= 10:
 
         history[round] = outcome
 
-    else:
-        print("Invalid entry")
-
-    continue_game = input("continue? (y/n): ")
-    if continue_game in ["n", "N"]:
-        break
-
-    round += 1
-
 print("player: ", player_points)
 print("computer: ", computer_points)
+if player_points > computer_points:
+  print('Player wins!')
+elif player_points == computer_points:
+  print('Draw!')
+else:
+  print('Computer wins!')
