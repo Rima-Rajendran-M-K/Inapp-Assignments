@@ -1,4 +1,4 @@
-import random 
+from random import randint
 
 choices = ["rock", "paper", "scissors"]
 outcomes_and_points = {
