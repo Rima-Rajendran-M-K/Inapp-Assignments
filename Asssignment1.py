@@ -5,7 +5,7 @@ outcomes_and_points = {
     # 0 := draw, 1 := Player won, -1 := Computer won
     "rock-rock": 0,
     "rock-paper": 1,
-    "rock-scissor": -1,
+    "rock-scissors": -1,
     "paper-rock": -1,
     "paper-paper": 0,
     "paper-scissors": 1,
