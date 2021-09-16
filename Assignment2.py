@@ -1,8 +1,8 @@
-#from IPython.display import clear_output
+from IPython.display import clear_output
 
 
 def display_board(board):
-    #clear_output()  # Remember, this only works in jupyter!
+    clear_output()  # Remember, this only works in jupyter!
 
     print('   |   |')
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
