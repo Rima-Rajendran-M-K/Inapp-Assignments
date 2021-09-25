@@ -79,11 +79,12 @@ def users_pets():
 
 print('WELCOME')
 print('__________')
-game = 1
 d1 = Dog1()
 d2 = Dog2()
 d3 = Dog3()
 c1 = Cat()
+print('__________')
+game = 1
 while game:
     print('\nMENU \n 1. Adopt \n 2. Greet \n 3. Teach \n 4. Feed \n 5. Display pets \n 6. Exit')
     ch = int(input("\nEnter the choice: "))
