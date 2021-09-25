@@ -59,7 +59,6 @@ class Dog1(Pet):
         print("Dog 1 successfully created!")
 
 class Dog2(Pet):
-    sounds = ["Woof", "ruff ruff"]
     def __init__(self):
         print("Dog 2 successfully created!")
 
@@ -94,7 +93,6 @@ while game:
         a_pet_type = input('Enter the pet type: ')
         pets.append(a_pet_name)
         user_pets[a_pet_name] = a_pet_type
-        print(pets)
     elif ch in range(2, 5):
         name = input('Enter pet name: ')
         p1 = Pet(name)
@@ -119,12 +117,3 @@ while game:
         users_pets()
     else:
         exit()
-
-
-
-
-
-
-
-
-
