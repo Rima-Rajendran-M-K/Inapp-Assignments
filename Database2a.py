@@ -1,4 +1,3 @@
-import pyexpat
 import sqlite3
 
 conn = sqlite3.connect('Employee.db')
@@ -17,9 +16,9 @@ conn.commit()
 c.execute("ALTER TABLE EMPLOYEE ADD COLUMN CITY CHAR(30)")
 print('**NEW COLUMN ADDED SUCCESSFULLY**')
 
-emp_values = [('AMAL', 101, 34000, 1, 'TVM'),
+emp_values = [('AMAL', 101, 34000, 4, 'TVM'),
               ('ANJANA', 102, 30000, 2, 'EKM'),
-              ('SNEHA', 103, 32000, 2, 'CAN'),
+              ('SNEHA', 103, 32000, 5, 'CAN'),
               ('NANDANA', 104, 28000, 3, 'CLT'),
               ('BHARATH', 105, 35000, 1, 'CLT')]
 c.executemany("INSERT INTO EMPLOYEE (NAME, ID, SALARY, DEPARTMENT_ID, CITY) VALUES (?, ?, ?, ?, ?)", emp_values)
@@ -96,4 +95,3 @@ while 1:
         print("Invalid choice!!")
 conn.commit()
 conn.close()
-
