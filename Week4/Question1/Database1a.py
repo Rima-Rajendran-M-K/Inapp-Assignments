@@ -29,5 +29,6 @@ c.execute("SELECT * FROM CAR")
 rows = c.fetchall()
 for row in rows:
     print(row)
+
 conn.commit()
 conn.close()
