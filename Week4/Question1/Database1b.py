@@ -88,5 +88,6 @@ while 1:
         exit()
     else:
         print("Invalid choice!!")
-
+        
+conn.commit()
 conn.close()
