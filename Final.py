@@ -46,7 +46,7 @@ class Cat(Pet):
         return result
 
 def main():
-        D1 = Dog('hamster')
+        D1 = Dog()
         D2 = Dog()
         D3 = Dog()
         D4 = Dog()
