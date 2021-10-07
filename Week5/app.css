@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 
 body{
-    background: #60a9ff;
+    background: #ff99ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,8 +87,9 @@ table {
 
 .pricing-header {
   color: #888;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 1px;
+  font-style: oblique;
 }
 
 .pricing-features {
@@ -132,7 +133,7 @@ table {
 }
 
 .pricing-button.is-featured {
-  background-color: #48aaff;
+  background-color: #ff99ff;
   color: white;
 }
 
