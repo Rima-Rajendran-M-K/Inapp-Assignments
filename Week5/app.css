@@ -108,10 +108,11 @@ table {
 
 .pricing-features-item:last-child{
   border-bottom: 1px solid #e1f1ff;
+  color: #ff9966
 }
 
 .pricing-price {
-  color: #016ff9;
+  color:  #99ff33;
   display: block;
   font-size: 32px;
   font-weight: 700;
