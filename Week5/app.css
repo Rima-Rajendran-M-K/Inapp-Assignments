@@ -121,7 +121,8 @@ table {
 .pricing-button {
   border: 1px solid #9dd1ff;
   border-radius: 10px;
-  color: #348efe;
+  color: #ff6600;
+  font-weight: bold;
   display: inline-block;
   padding: 15px 35px;
   text-decoration: none;
