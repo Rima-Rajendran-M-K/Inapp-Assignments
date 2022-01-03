@@ -6,10 +6,26 @@ using System.Threading.Tasks;
 
 namespace AssignmentConsoleApp1
 {
+    class Program
+    {
+        static void Main()
+        {
+            var Student = new student("Rithun", 12, 18, 82, 85, 73, 92, 100);
+            Console.WriteLine("Details of the student");
+            Student.studentdetails(Student);
+            Console.WriteLine("\nOverall grade and percentage of the student");
+            Student.total(Student);
+            Console.WriteLine("\nGrade in each subject");
+            Student.subjectgrade(Student);
+        }
+    }
+}
+namespace AssignmentConsoleApp1
+{
     class student
     {
         public string name { get; set; }
-        public int standard { get; set; } 
+        public int standard { get; set; }
         public int rollno { get; set; }
         public double sub1 { get; set; }
         public double sub2 { get; set; }
@@ -30,70 +46,60 @@ namespace AssignmentConsoleApp1
             this.sub4 = sub4;
             this.sub5 = sub5;
         }
-        public void studentdetails()
+        public void studentdetails(student Student)
         {
-            Console.WriteLine("Name : "+Student.name);
-            Console.WriteLine("Class : "+Student.standard);
-            Console.WriteLine("Roll No : "+Student.rollno);
-            Console.WriteLine("Marks in Physics     : "+Student.sub1);
-            Console.WriteLine("Marks in Chemistry   : "+Student.sub2);
-            Console.WriteLine("Marks in Mathematics : "+Student.sub3);
-            Console.WriteLine("Marks in English     : "+Student.sub4);
-            Console.WriteLine("Marks in Hindi       : "+Student.sub5);       
+            Console.WriteLine("Name                 : " + Student.name);
+            Console.WriteLine("Class                : " + Student.standard);
+            Console.WriteLine("Roll No              : " + Student.rollno);
+            Console.WriteLine("Marks in Physics     : " + Student.sub1);
+            Console.WriteLine("Marks in Chemistry   : " + Student.sub2);
+            Console.WriteLine("Marks in Mathematics : " + Student.sub3);
+            Console.WriteLine("Marks in English     : " + Student.sub4);
+            Console.WriteLine("Marks in Hindi       : " + Student.sub5);
         }
-        public void total()
+        public void total(student Student)
         {
             sum = Student.sub1 + Student.sub2 + Student.sub3 + Student.sub4 + Student.sub5;
             average = sum / 5;
-            Console.WriteLine("Total percentage : "+average);
+            Console.WriteLine("Total percentage : " + average);
+            Console.Write("Overall grade : ");
+            grade(Student.average);
         }
         public void grade(double num)
         {
-            for(int i=0; i < 5; i++)
+            if (num > 90)
             {
-                if (num > 90)
-                {
-                    Console.WriteLine(" Grade: " + "A");
-                }
-                else if(num > 80)
-                {
-                    Console.WriteLine(" Grade: " + "B");
-                } 
-                else if (num > 70)
-                {
-                    Console.WriteLine(" Grade: " + "C");
-                }
-                else if (num > 50)
-                {
-                    Console.WriteLine(" Grade: " + "D");
-                }
-                else
-                {
-                    Console.WriteLine(" Grade: " + "FAIL");
-                }
+                Console.WriteLine("A");
+            }
+            else if (num > 80)
+            {
+                Console.WriteLine("B");
+            }
+            else if (num > 70)
+            {
+                Console.WriteLine("C");
+            }
+            else if (num > 50)
+            {
+                Console.WriteLine("D");
+            }
+            else
+            {
+                Console.WriteLine("FAIL");
             }
         }
-        public void subjectgrade()
+        public void subjectgrade(student Student)
         {
-            Console.WriteLine("Grade in Physics     : "+Student.grade(sub1));
-            Console.WriteLine("Grade in Chemistry   : "+Student.grade(sub2));
-            Console.WriteLine("Grade in Mathematics : "+Student.grade(sub3));
-            Console.WriteLine("Grade in English     : "+Student.grade(sub4));
-            Console.WriteLine("Grade in Hindi       : "+Student.grade(sub5)); 
-        } 
-
-    }
-namespace AssignmentConsoleApp1
-{
-    class Program
-    {
-        public static void Main(string[] args)
-        { 
-            var Student = new student("Rithun",12,18,82,85,73,89,100);
-            Student.studentdetails();
-            Student.total();
-            Console.WriteLine("Overall grade : "+Student.grade(average));
-            Student.subjectgrade();
+            Console.Write("Grade in Physics     : ");
+            grade(Student.sub1);
+            Console.Write("Grade in Chemistry   : ");
+            grade(Student.sub2);
+            Console.Write("Grade in Mathematics : ");
+            grade(Student.sub3);
+            Console.Write("Grade in English     : ");
+            grade(Student.sub4);
+            Console.Write("Grade in Hindi       : ");
+            grade(Student.sub5);
         }
     }
 }
